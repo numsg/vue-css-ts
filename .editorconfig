@@ -1,0 +1,42 @@
+# Editor configuration, see http://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+
+[*.{md,markdown}]
+max_line_length = off
+insert_final_newline = true
+trim_trailing_whitespace = false
+
+[*.js]
+insert_final_newline = false
+trim_trailing_whitespace = true
+
+[*.json]
+insert_final_newline = true
+trim_trailing_whitespace = false
+
+[*.{java,cs}]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 140
+
+[*.gradle]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.yml]
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.ts]
+insert_final_newline = true
+trim_trailing_whitespace = true

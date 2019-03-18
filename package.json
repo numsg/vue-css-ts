@@ -1,0 +1,32 @@
+{
+  "name": "vue-css-ts",
+  "version": "1.0.0-RC",
+  "description": "Local style processing in Vue for ts-oriented development mode",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "css-module",
+    "vue",
+    "vue-css",
+    "typescript"
+  ],
+  "author": "numsg",
+  "license": "MIT",
+  "directories": {
+    "lib": "src",
+    "test": "text"
+  },
+  "devDependencies": {
+    "lint": "^1.1.2",
+    "mocha": "^6.0.2",
+    "typescript": "^3.3.3333"
+  }
+}
