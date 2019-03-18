@@ -31,7 +31,6 @@ export default function c(_this: any): any {
   classs = handleObjectClass(classData['class']);
 
   handleAllClassData(staticClasss, classs, classData, styles);
-  console.log(classData);
   return fn.apply(null, args);
 }
 
