@@ -1,7 +1,7 @@
 # VUE-CSS-TS
 How to handle html templates and css for typescript coding style.
 
-[![npm](https://img.shields.io/npm/v/npm.svg)]()
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/vue-css-ts)
 
 ## License
 MIT License
