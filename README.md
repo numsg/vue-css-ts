@@ -75,7 +75,7 @@ export class ErrorComponent extends Vue {
 }
 ```
 
-### How to modify third-party control styles scoped
+### How to modify third-party component styles scoped
 
 1. import
 ```ts
