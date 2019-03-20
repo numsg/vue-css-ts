@@ -26,6 +26,7 @@ Vue.use(VueTsCss);
 ```
 2. in html，eg： error.html
 ```html
+<div>
   <p class="page-container">404 page not found</p>
    <div class="button-green">111
       <el-collapse accordion>
