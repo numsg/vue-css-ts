@@ -1,5 +1,5 @@
 # VUE-CSS-TS
-How to handle html templates and css for typescript coding style.
+Local style processing in Vue for ts-oriented development mode
 
 [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/vue-css-ts)
 
