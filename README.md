@@ -155,7 +155,6 @@ in child ts
 ``` ts
 @Component({
   template: require('./error.biz.html'),
-  style: errorBizStyle,
   components: {
     'child-biz': ErrorBizChildComponent
   }
