@@ -138,6 +138,8 @@ Note:
 
 * `c____2____el-collapse-item__wrap` `c` stands for passing styles to child components, and number `2` represent the level of child components
 
+* `c____100____el-collapse-item__wrap` `c` stands for passing styles to all child components, and number `2` represent the level of child components
+
 4. in parent ts
 ``` ts
 @Component({

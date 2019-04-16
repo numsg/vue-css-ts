@@ -58,13 +58,24 @@ function handleStyles(styles: any): any {
     if (p.match(/c____+\d+____/)) {
       let pMatch: any = p.match(/c____+\d+____/);
       let s = pMatch[0];
-      let c = s.match(/\d/)[0];
+      let c = s.match(/[0-9]\d*/)[0];
       let cInt = parseInt(c);
       let childStyleName;
       let lastChildStyleName;
-      if (cInt > 0) {
+      if (cInt > 0 && cInt!= 100) {
         let lastName = p.substr(10, p.length - 10);
         childStyleName = 'c____' + (cInt - 1) + '____' + lastName;
+        lastChildStyleName = lastName;
+        objStyles.push({
+          c: c,
+          p: p,
+          styleName: styles[p],
+          childStyleName: childStyleName,
+          lastChildStyleName: lastChildStyleName
+        });
+      }else if(cInt == 100){
+        let lastName = p.substr(12, p.length - 12);
+        childStyleName = 'c____' + cInt + '____' + lastName;
         lastChildStyleName = lastName;
         objStyles.push({
           c: c,
@@ -78,7 +89,6 @@ function handleStyles(styles: any): any {
   }
   return objStyles;
 }
-
 
 /**
  * 样式向子组件传递

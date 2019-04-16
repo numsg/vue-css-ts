@@ -12,6 +12,7 @@ export default function c(_this: any): any {
   let fn = _this.createElement;
   let context = _this.context === void 0 ? {} : _this.context;
   let styles = _this.styles === void 0 ? context.$style || {} : _this.styles;
+
   if (isString(styles)) {
     styles = context[styles] || {};
   }
@@ -69,18 +70,28 @@ function handleAllClassData(staticClasss: any, classs: any, classData: any, styl
   if (staticClasss.length || classs.length) {
     let classArray = Array.isArray(staticClasss) ? staticClasss : [staticClasss];
     classArray = classArray.concat(classs);
-    classData.staticClass = '';
+    // classData.staticClass = '';
     for (let i in classArray) {
       if (classArray[i] === void 0)
         continue;
-      let classOne = classArray[i].split(/\s+/g);
-      classOne.forEach((className: any) => {
-        if (styles[className.trim()]) {
-          classData.staticClass += " " + styles[className.trim()];
-        } else {
-          classData.staticClass += " " + className;
+      if(isString(classArray[i])){
+        let classOne = classArray[i].split(/\s+/g);
+        classOne.forEach((className: any) => {
+          if (styles[className.trim()]) {
+            classData.staticClass += " " + styles[className.trim()];
+          } else {
+            classData.staticClass += " " + className;
+          }
+        })
+      }
+      if(isObject(classArray[i])){
+        for (let o in classArray[i]) {
+          if (classArray[i][o]) {
+            classData.staticClass += " " + o;
+
+          }
         }
-      })
+      }
     }
     classData.class = '';
   }
