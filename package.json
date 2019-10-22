@@ -1,6 +1,6 @@
 {
   "name": "vue-css-ts",
-  "version": "1.0.2-RC",
+  "version": "1.0.3-RC",
   "description": "Local style processing in Vue for ts-oriented development mode",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
